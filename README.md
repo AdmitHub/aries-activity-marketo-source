@@ -9,13 +9,15 @@ You'll need a Marketo client id, client secret, identity, and rest endpoint to g
 
 ## Methods
 
+This integration uses x methods:
+
 - `getLead(id)` - Returns a lead given an id
 - `getLeads()` - Returns a list of up to 300 leads based on a list of values in a particular field
-- `listDescribeLeads(fieldKey, fieldValue)` - Gets the ids for field keys that match the field values
+- `listDescribeLeads({ fieldKey, fieldValue })` - Gets a list of ids for field keys that match the field values
     - `fieldKey` - a string
     - `fieldValue` - a string
-- `lookupLeads(ids)` - Returns a list of leads matching the id(s) given
-    - `ids` - an array of ids
+- `lookupLeads({ fieldKey, fieldValue, nextPageToken = null })` - Returns a list of leads matching the id(s) given
+    - `nextPageToken` - a string and the token for the next page of leads (null by default)
 
 ## Configuration
 

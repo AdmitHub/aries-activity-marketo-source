@@ -23,7 +23,7 @@ describe('MarketoSource', () => {
     describe('listDescribeLeads', () => {
         it('should filter based on fieldKey and fieldValue', async () => {
             const source = new MarketoSource(options.clientId, options.clientSecret, options.endpoint, options.identity);
-            const result = await source.listDescribeLeads('displayName', 'Site');
+            const result = await source.listDescribeLeads({ fieldKey: 'displayName', fieldValue: 'Site' });
 
             assert.isOk(result);
         });
@@ -32,7 +32,7 @@ describe('MarketoSource', () => {
     describe('lookupLeads', () => {
         it('should return ids corresponding to fieldKey and fieldValue', async () => {
             const source = new MarketoSource(options.clientId, options.clientSecret, options.endpoint, options.identity);
-            const result = await source.lookupLeads('displayName', 'Site');
+            const result = await source.lookupLeads({ fieldKey: 'displayName', fieldValue: 'Site' });
 
             assert.isOk(result);
             assert.isTrue(result instanceof Array);
