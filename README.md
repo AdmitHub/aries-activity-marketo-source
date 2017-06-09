@@ -11,8 +11,9 @@ You'll need a Marketo client id, client secret, identity, and rest endpoint to g
 
 This integration uses x methods:
 
-- `getLead(id)` - Returns a lead given an id
-- `getLeads()` - Returns a list of up to 300 leads based on a list of values in a particular field
+- `getStaticList({ listId, fields })` - Returns the static list filtered by the given params
+    - `listId` - a number
+    - `fields` - a string with fields separated by comma
 - `listDescribeLeads({ fieldKey, fieldValue })` - Gets a list of ids for field keys that match the field values
     - `fieldKey` - a string
     - `fieldValue` - a string
