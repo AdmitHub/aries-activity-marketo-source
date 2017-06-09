@@ -1,0 +1,17 @@
+{
+  "result": [
+    {
+      "id": 1726852,
+      "firstName": "John",
+      "lastName": "Doe",
+      "company": "John Doe, Inc."
+    },
+    {
+      "id": 8989321,
+      "firstName": "Johnny",
+      "lastName": "Appleseed",
+      "company": "Findlay Market"
+    }
+  ],
+  "nextPageToken": null
+}

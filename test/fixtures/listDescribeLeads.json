@@ -1,0 +1,30 @@
+{
+  "result": [
+    {
+      "id": 6,
+      "displayName": "Marketo Social LinkedIn Reach",
+      "dataType": "integer",
+      "rest": {
+        "name": "linkedInReach",
+        "readOnly": false
+      },
+      "soap": {
+        "name": "MarketoSocialLinkedInReach",
+        "readOnly": false
+      }
+    },
+    {
+      "id": 3,
+      "displayName": "Marketo Social Twitter Reach",
+      "dataType": "integer",
+      "rest": {
+        "name": "twitterReach",
+        "readOnly": false
+      },
+      "soap": {
+        "name": "MarketoSocialTwitterReach",
+        "readOnly": false
+      }
+    }
+  ]
+}
