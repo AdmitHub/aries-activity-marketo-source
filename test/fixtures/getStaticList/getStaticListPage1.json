@@ -1,0 +1,19 @@
+{
+  "result": [
+    {
+      "id": 8943231,
+      "firstName": "Rosie",
+      "lastName": "Red",
+      "company": "Cincinnati Reds",
+      "email": "rosie@reds.com"
+    },
+    {
+      "id": 2302932,
+      "firstName": "Richard",
+      "lastName": "Hendricks",
+      "company": "Pied Piper",
+      "email": "richard@piedpiper.com"
+    }
+  ],
+  "nextPageToken": "LS5VL5WD4PUVCOUCJR6VY7JQOYHUSZXFAIXVQSVBTJW7Q23CCGZ4X4JNKUNCF4LCXZJHONDNVOP6Y==="
+}

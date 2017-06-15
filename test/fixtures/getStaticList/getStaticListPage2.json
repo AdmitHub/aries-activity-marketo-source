@@ -1,0 +1,19 @@
+{
+  "result": [
+    {
+      "id": 3289321,
+      "firstName": "Jack",
+      "lastName": "Barker",
+      "company": "Hooli",
+      "email": "jack@hooli.com"
+    },
+    {
+      "id": 1356256,
+      "firstName": "Peter",
+      "lastName": "Gregory",
+      "company": "Raviga Capital",
+      "email": "peter@ravigacapital.com"
+    }
+  ],
+  "nextPageToken": null
+}
