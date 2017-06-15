@@ -9,19 +9,12 @@ You'll need a Marketo client id, client secret, identity endpoint, and rest endp
 
 ## Methods
 
-This integration uses 3 methods:
+This integration uses 1 method:
 
 - `getStaticList({ listId, fields, nextPageToken = null })` - Returns the static list filtered by the given fields
     - `listId` - a number
     - `fields` - a string with fields separated by comma
     - `nextPageToken` - a string and the token for the next page of leads (null by default)
-- `lookupLeads({ fieldKey, fieldValue, nextPageToken = null })` - Returns a list of leads matching the id(s) given
-    - `fieldKey` - a string
-    - `fieldValue` - a string
-    - `nextPageToken` - a string and the token for the next page of leads (null by default)
-- `listDescribeLeads({ fieldKey, fieldValue })` - Gets a list of ids for field keys that match the field values
-    - `fieldKey` - a string
-    - `fieldValue` - a string
 
 ## Configuration
 
