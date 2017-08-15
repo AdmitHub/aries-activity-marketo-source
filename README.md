@@ -18,21 +18,66 @@ This integration uses 1 method:
 
 ## Configuration
 
-As noted in the getting started section, you'll need a client id, client secret, identity endpoint, and rest endpoint for your configuration. You can get these credentials by following [this Marketo documentation](http://developers.marketo.com/rest-api/authentication/). An example configuration can be found in `.env.example`.
+As noted in the getting started section, you'll need a client id, client secret, identity endpoint, and rest endpoint for your configuration. You can get these credentials by following [this Marketo documentation](http://developers.marketo.com/rest-api/authentication/).
+
+Client ID
+
+```js
+"clientId": "<client_id>"
+```
+
+Client Secret
+
+```js
+"clientSecret": "<client_secret>"
+```
+
+Endpoint
+
+```js
+"endpoint": "https://example.mktorest.com/rest"
+```
+
+Identity
+
+```js
+"identity": "https://example.mktorest.com/identity"
+```
+
+Method - see above for a list of available methods
+
+```js
+"method": "getStaticList"
+```
 
 ## Example
 
-Example call to get the fields `firstName`, `lastName`, `id`, and `company` from a static list with id `57777`:
+Example configuration to get the fields `firstName`, `lastName`, `id`, and `company` from a static list with id `57777`:
+
+```js
+"config": {
+    "clientId": "<client_id>",
+    "clientSecret": "<client_secret>",
+    "identity": "https://example.mktorest.com/rest",
+    "endpoint": "https://example.mktorest.com/identity",
+    "method": "getStaticList",
+    "listId": "57777",
+    "fields": "firstName,lastName,id,company"
+}
+```
+
+And the same example programmatically:
 
 ```js
 (async() => {
-    const source = new MarketoSource('client_id', 'client_secret', 'https://example.mktorest.com/rest', 'https://example.mktorest.com/identity');
+    const source = new MarketoSource('<client_id>', '<client_secret>', 'https://example.mktorest.com/rest', 'https://example.mktorest.com/identity');
     const result = await source.getStaticList({ listId: '57777', fields: 'firstName,lastName,id,company' });
 });
 ```
-And example response for the call:
 
-```json
+And example response for the configuration:
+
+```js
 [
   {
     "id": 1726852,
@@ -45,7 +90,8 @@ And example response for the call:
     "firstName": "Johnny",
     "lastName": "Appleseed",
     "company": "Findlay Market"
-  }
+  },
+  // ...
 ]
 ```
 
